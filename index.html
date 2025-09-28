@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Telegroove</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for Telegram and Windows Phone aesthetic, IE11 compatible */
+        body {
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            margin: 0;
+        }
+        .telegram-blue {
+            background-color: #0088cc;
+        }
+        .tile {
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+            -ms-transition: background-color 0.3s ease;
+        }
+        .tile:hover {
+            background-color: #f5f5f5;
+            margin-top: -5px; /* Fallback for transform */
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #DEDEDE 0%, #33b5e5 100%);
+            background: -ms-linear-gradient(135deg, #DEDEDE 0%, #33b5e5 100%); /* IE11 */
+        }
+        .tiles-container {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        .tile-wrapper {
+            -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+            padding: 15px;
+            min-width: 300px; /* Prevent tiles from shrinking too much */
+        }
+        @media (min-width: 768px) {
+            .tile-wrapper {
+                -ms-flex: 1 1 50%;
+                flex: 1 1 50%;
+            }
+        }
+        @media (min-width: 1024px) {
+            .tile-wrapper {
+                -ms-flex: 1 1 33.333%;
+                flex: 1 1 33.333%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header Section -->
+    <header class="hero-bg text-white p-6 text-center">
+        <h1 class="text-4xl font-bold mb-2">Telegroove</h1>
+        <p class="text-lg">A Telegram client crafted with love for Windows Phone</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6">
+        <!-- Tiles Section -->
+        <section class="tiles-container">
+            <!-- Tile 1: About -->
+            <div class="tile-wrapper">
+                <div class="tile bg-white rounded-lg p-6 shadow-md">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">About Telegroove</h2>
+                    <p class="text-gray-600">
+                        Telegroove brings the power of Telegram to your Windows Phone with a nostalgic Metro UI design.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tile 2: Features -->
+            <div class="tile-wrapper">
+                <div class="tile bg-white rounded-lg p-6 shadow-md">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Features</h2>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Fast and secure messaging</li>
+                        <li>Windows Phone as target OS</li>
+                        <li>Modern features on old phone</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-gray-600">
+            <p>Made with ❤️ for Windows Phone enthusiasts</p>
+            <p class="mt-2">Telegroove is for everybody and has no copyright.</p>
+        </footer>
+    </main>
+
+    <!-- Telegram-inspired Floating Action Button -->
+    <button class="fixed bottom-6 right-6 bg-telegram-blue text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.54 7.32l-1.76 8.29c-.13.61-.69.79-1.05.39l-2.49-1.84-1.62 1.56c-.36.35-.86.23-1.04-.22l-.29-1.73-4.67-4.22c-.48-.43-.1-1.2.54-1.2h.01l10.67 4.11c.46.18.61.65.35 1.03z"/>
+        </svg>
+    </button>
+</body>
+</html>
